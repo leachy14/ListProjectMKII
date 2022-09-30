@@ -6,7 +6,7 @@ import java.util.*;
  * @version 1.0
  */
 public class NicePerson extends Name implements NicePersonInterface {
-    private List<String> presents = new ArrayList<String>();
+    private final List<String> presents = new ArrayList<String>();
     private String firstName;
     private String lastName;
 
@@ -109,7 +109,7 @@ public class NicePerson extends Name implements NicePersonInterface {
      * @return a string representation of the nice person
      */
     public String toString() {
-        return firstName + " " + lastName + " " + presents.toString();
+        return firstName + " " + lastName + " " + presents;
     }
 
 }
