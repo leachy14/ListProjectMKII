@@ -17,21 +17,24 @@ public class SantasList {
         ArrayList<NicePerson> nicePeople = new ArrayList<NicePerson>();
         //create a list of six presents
         ArrayList<String> presents = new ArrayList<String>();
-        presents.add("a new car");
-        presents.add("a new house");
-        presents.add("a new boat");
-        presents.add("a new motorcycle");
-        presents.add("a new bicycle");
-        presents.add("a new computer");
+        presents.add("Skippy");
+        presents.add("Optical Camo");
+        presents.add("Basilisk");
+        presents.add("Thorton truck");
+        presents.add("Arasaka Cyberware");
+        presents.add("Kiroshi optics");
         nicePeople.add(new NicePerson("Morgan", "Blackhand"));
         nicePeople.add(new NicePerson("Johny", "Silverhand"));
         nicePeople.add(new NicePerson("V", ""));
         //add a present to the first nice person
         // nicePeople.get(0).addPresent("Vacation Time");
-        //loop through all current nice people and add a random present
+        //loop through all current nice people and add a three random presents
         for (NicePerson nicePerson : nicePeople) {
-            nicePerson.addPresent(presents.get((int) (Math.random() * presents.size())));
+            for (int i = 0; i < 3; i++) {
+                nicePerson.addPresent(presents.get((int) (Math.random() * presents.size())));
+            }
         }
+        
 
         //print out all the nice people
         for (NicePerson person : nicePeople) {
