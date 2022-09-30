@@ -1,7 +1,4 @@
-import java.util.List;
-import java.util.Random;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 /**
  * This is a client class meant to test the NicePerson class.
  * It will create an array list of nice people and add them to the list.
@@ -12,31 +9,38 @@ import java.util.List;
 public class SantasList {
 
     public static void main(String[] args) {
+        //test code
+        testNicePerson();
+    }
+
+    public static void testNicePerson() {
         ArrayList<NicePerson> nicePeople = new ArrayList<NicePerson>();
-        nicePeople.add(new NicePerson("Christopher", "Leach"));
-        nicePeople.add(new NicePerson("John", "Smith"));
-        nicePeople.add(new NicePerson("Jane", "Doe"));
-        nicePeople.add(new NicePerson("Bob", "Jones"));
-        nicePeople.add(new NicePerson("Sally", "Smith"));
-        nicePeople.add(new NicePerson("Joe", "Smith"));
-        List<String> presents = new ArrayList<String>();
-        presents.add("xbox");
-        presents.add("ps4");
-        presents.add("nintendo switch");
-        presents.add("pc");
-        presents.add("mac");
-        presents.add("iphone");
-
-        //loop through nice people and add presents to their object
+        //create a list of six presents
+        ArrayList<String> presents = new ArrayList<String>();
+        presents.add("a new car");
+        presents.add("a new house");
+        presents.add("a new boat");
+        presents.add("a new motorcycle");
+        presents.add("a new bicycle");
+        presents.add("a new computer");
+        nicePeople.add(new NicePerson("Morgan", "Blackhand"));
+        nicePeople.add(new NicePerson("Johny", "Silverhand"));
+        nicePeople.add(new NicePerson("V", ""));
+        //add a present to the first nice person
+        // nicePeople.get(0).addPresent("Vacation Time");
+        //loop through all current nice people and add a random present
         for (NicePerson nicePerson : nicePeople) {
-            nicePerson.addPresent(presents.get(new Random().nextInt(presents.size())));
+            nicePerson.addPresent(presents.get((int) (Math.random() * presents.size())));
         }
 
-        //print the entire list of nice people
-        for (NicePerson nicePerson : nicePeople) {
-            System.out.println(nicePerson.getName() + " " + nicePerson.getPresents());
+        //print out all the nice people
+        for (NicePerson person : nicePeople) {
+            System.out.println(person.getName());
+            System.out.println(person.getPresents());
         }
-        //currently getting error that the presents list is NULL
+
+
+
     }
 
 }

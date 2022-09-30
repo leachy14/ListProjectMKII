@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 /**
  * This class represents a nice person.
  * It will have a name and a list of presents.
@@ -8,7 +7,6 @@ import java.util.List;
  */
 public class NicePerson extends Name implements NicePersonInterface {
     private List<String> presents = new ArrayList<String>();
-    private String name;
     private String firstName;
     private String lastName;
 
@@ -38,7 +36,7 @@ public class NicePerson extends Name implements NicePersonInterface {
      * @return the full name of the nice person
      */
     public String getName() {
-        return this.name;
+        return getFirst() + " " + getLast();
     }
     /**
      * This method will set the first name of the nice person.

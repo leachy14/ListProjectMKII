@@ -1,5 +1,3 @@
-import java.util.List;
-
 /**
  * An interface for the NicePerson class.
  * The nice person class consists of a full name and a list of presents
