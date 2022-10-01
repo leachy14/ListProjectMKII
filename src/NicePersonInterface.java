@@ -47,6 +47,11 @@ public interface NicePersonInterface {
      */
     public void addPresent(String present);
     /**
+     * Removes the present at the given index from the nice person's list of presents
+     * @param index the index of the present to remove from the list
+     */
+    public void removePresent(int index);
+    /**
      * removes a present from the nice person's list of presents
      * @param present the present to remove from the list
      */

@@ -6,7 +6,7 @@ import java.util.*;
  * @version 1.0
  */
 public class NicePerson extends Name implements NicePersonInterface {
-    private final List<String> presents = new ArrayList<String>();
+    private final List<String> presents = new ArrayList<>();
     private String firstName;
     private String lastName;
 
@@ -89,6 +89,13 @@ public class NicePerson extends Name implements NicePersonInterface {
      */
     public void removePresent(String present) {
         this.presents.remove(present);
+    }
+    /**
+     * This method will remove the present at the given index
+     * @param index the index of the present to remove
+     */
+    public void removePresent(int index) {
+        this.presents.remove(index);
     }
     /**
      * This method will retrieve the list of presents as a string.

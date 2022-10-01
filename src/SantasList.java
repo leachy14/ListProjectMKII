@@ -11,9 +11,33 @@ public class SantasList {
     public static void main(String[] args) {
         //Calls the method where the test code is
         testNicePerson();
+
+        /**
+         * output:
+         * Morgan Blackhand
+         * [Optical Camo, Basilisk, Skippy]
+         * Johny Silverhand
+         * [Kiroshi optics, Optical Camo, Arasaka Cyberware]
+         * V
+         * [Skippy, Basilisk, Basilisk]
+         * Judy Alverez
+         * [Thorton truck, Thorton truck, Thorton truck]
+         * Panam Palmer
+         * [Arasaka Cyberware, Skippy, Kiroshi optics]
+         * River Smith
+         * [Basilisk, Skippy, Arasaka Cyberware]
+         * [Morgan Blackhand [Optical Camo, Basilisk, Skippy], Johny Silverhand [Kiroshi optics, Optical Camo, Arasaka Cyberware], V  [Skippy, Basilisk, Basilisk], Judy Alverez [Thorton truck, Thorton truck, Thorton truck], Panam Palmer [Arasaka Cyberware, Skippy, Kiroshi optics]]
+         * Morgan Blackhand
+         * Johny Blackhand
+         * V Blackhand
+         * Judy Blackhand
+         * Panam Blackhand
+         * [Morgan Blackhand [Basilisk, Skippy], Johny Blackhand [Optical Camo, Arasaka Cyberware], V Blackhand [Basilisk, Basilisk], Judy Blackhand [Thorton truck, Thorton truck], Panam Blackhand [Skippy, Kiroshi optics]]
+         */
     }
 
     public static void testNicePerson() {
+        //cyberpunk themed people and presents
         //Creates a new array list of nice people
         ArrayList<NicePerson> nicePeople = new ArrayList<>();
         //create a list of six presents
@@ -24,7 +48,7 @@ public class SantasList {
         presents.add("Thorton truck");
         presents.add("Arasaka Cyberware");
         presents.add("Kiroshi optics");
-        //add some NicePerson object to the list
+        //add some nice people to the list
         nicePeople.add(new NicePerson("Morgan", "Blackhand"));
         nicePeople.add(new NicePerson("Johny", "Silverhand"));
         nicePeople.add(new NicePerson("V", ""));
@@ -58,6 +82,14 @@ public class SantasList {
         for (NicePerson person : nicePeople) {
             System.out.println(person.getName());
         }
+
+        //loop through the list and remove the first present from each person
+        for (NicePerson person : nicePeople) {
+            person.removePresent(0);
+        }
+
+        //print out all the nice people using toString
+        System.out.println(nicePeople.toString());
 
 
 
